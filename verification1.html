@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Verification Form</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f8e4f0;
+        }
+        .container {
+          width: 90%;
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: hsl(200, 11%, 89%);
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(252, 200, 200, 0.1);
+          padding: 20px;
+        }
+        .logo {
+          display: block;
+          margin: 0 auto 20px;
+          max-width: 150px;
+        }
+        h2 {
+          text-align: center;
+          font-style: #da5326;
+        }
+        .legend {
+          text-align: center;
+          font-style: #161616;
+          box-shadow:#95eb8a
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        label {
+          font-weight: Arial, sans-serif;
+        }
+        input, textarea, select {
+          padding: 8px;
+          width: 100%;
+          border: 1px solid #131212;
+          border-radius: 4px;
+        }
+        textarea {
+          resize: none;
+        }
+        .button-group {
+          text-align: j center;
+        }
+        button {
+          padding: 10px 20px;
+          background-color: #1064e2;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color:#1064e2;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add your company logo below -->
+        
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h2>Candidate Verification Form</h2>
+    </div>
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="candidateName">Candidate’s Name:</label>
+        <input type="text" id="candidateName" name="candidateName" required>
+
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" required>
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required>
+
+        <label for="companyLocation">Company Location:</label>
+        <input type="text" id="companyLocation" name="companyLocation">
+
+        <label for="companyTelNo">Company Tel No.:</label>
+        <input type="tel" id="companyTelNo" name="companyTelNo">
+
+        <label for="dateOfJoining">Date of Joining:</label>
+        <input type="date" id="dateOfJoining" name="dateOfJoining">
+
+        <label for="dateOfRelieving">Date of Relieving:</label>
+        <input type="date" id="dateOfRelieving" name="dateOfRelieving">
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation">
+
+        <label for="remuneration">Remuneration (per annum):</label>
+        <input type="text" id="remuneration" name="remuneration">
+
+        <label for="supervisorDetails">Supervisor Name & Designation:</label>
+        <input type="text" id="supervisorDetails" name="supervisorDetails">
+
+        <label for="reasonForLeaving">Reason for Leaving:</label>
+        <textarea id="reasonForLeaving" name="reasonForLeaving" rows="3"></textarea>
+
+        <label for="jobType">Job Type:</label>
+        <select id="jobType" name="jobType">
+            <option value="Permanent">Permanent</option>
+            <option value="Temporary">Temporary</option>
+            <option value="Contractual">Contractual</option>
+        </select>
+
+        <label for="rehireEligibility">Eligibility for Re-hire:</label>
+        <select id="rehireEligibility" name="rehireEligibility">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="additionalComments">Your Additional Comments:</label>
+        <textarea id="additionalComments" name="additionalComments" rows="3"></textarea>
+
+        <label for="yourDetails">Your Name, Designation & Contact No.:</label>
+        <input type="text" id="yourDetails" name="yourDetails">
+        </fieldset>
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
